@@ -2,7 +2,7 @@
 
 *  git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO 
 
-* cd openvino
+*  cd Yi-OpenVINO
 
 ### Build the docker container from Dockerfile: ###
 
@@ -18,7 +18,7 @@
 ~~~
 git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
 
-cd openvino
+cd Yi-OpenVINO
 
 docker-compose -f docker-compose.yml up -d --build
 
@@ -29,7 +29,7 @@ docker-compose -f docker-compose.yml up -d --build
 ~~~
 git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
 
-cd openvino
+cd Yi-OpenVINO
 
 bash build-script.sh
 
