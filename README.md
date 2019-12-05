@@ -16,7 +16,7 @@
 ### Build the docker container from Dockerfile using Docker-Compose command : ###
 
 ~~~
-git clone --branch=3.334 --depth=1 https://yi-israel:Xuna7421@bitbucket.org/yi-israel/openvino/ 
+git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
 
 cd openvino
 
