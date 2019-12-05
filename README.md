@@ -63,7 +63,7 @@ python classification_sample/classification_sample.py -m /opt/intel/openvino_201
 ~~~
 ---------------------------------------------------
 
-#### OpenVINO---2.334 ####
+#### OpenVINO---3.334 ####
 
 ---------------------------------------------------
 ~~~
