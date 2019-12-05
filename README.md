@@ -1,4 +1,4 @@
-### Clone Repository:###
+### Clone Repository:
 
 *  git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO 
 
