@@ -18,7 +18,7 @@ pipeline {
                       if [[ "$(docker images -q yi/openvino:3.334 2> /dev/null)" == "$image_id" ]]; then
                           docker inspect --format='{{range $p, $conf := .RootFS.Layers}} {{$p}} {{end}}' $image_id
                       else
-                          echo "It appears that current docker image corrapted!!!"
+                          echo "It appears that current docker image corrupted!!!"
                           exit 1
                       fi 
                   '''
