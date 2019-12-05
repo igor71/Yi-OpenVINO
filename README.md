@@ -3,65 +3,52 @@ Building OpenVINO Docker Image
 
 ### Clone Repository:###
 
-* git clone --branch=master --depth=1 https://bitbucket.org/yi-israel/openvino/
+* git clone --branch=3.334 --depth=1 https://bitbucket.org/yi-israel/openvino/ 
 
-* cd openvino 
+* cd openvino
 
-### Build the docker: ###
+### Build the docker container from Dockerfile: ###
 
-* docker build -f Dockerfile-OpenVINO-1.144 -t yi/openvino:1.144 .
-* docker build -f Dockerfile-OpenVINO-2.242 -t yi/openvino:2.242 .
-* docker build -f Dockerfile-OpenVINO-2.242 -t yi/openvino:3.334 .
-
+* docker build -f Dockerfile-OpenVINO-3.334 -t yi/openvino:3.334 .
 
 ### Running docker container: ###
 
-* docker run -it -d  --name openvino-1.144 -v /media:/media yi/openvino:1.144
-* docker run -it -d  --name openvino-2.242 -v /media:/media yi/openvino:2.242
 * docker run -it -d  --name openvino-3.334 -v /media:/media yi/openvino:3.334
-* yi-dockeradmin openvino-X.XXX
+* yi-dockeradmin openvino-3.334
+
+### Build the docker container from Dockerfile using Docker-Compose command : ###
+
+~~~
+git clone --branch=3.334 --depth=1 https://yi-israel:Xuna7421@bitbucket.org/yi-israel/openvino/ 
+
+cd openvino
+
+docker-compose -f docker-compose.yml up -d --build
+
+~~~
+
+### Notes:
+* Dockerfile-OpenVINO-3.334 will use build from the sources python 3.6.8
+* Dockerfile-PyENV will use installation of python 3.6.8 into PYENV user folder
+* Dockerfile will use build in python 3.6.x version as default
+
+Need to adjust docker-compose.yml file for usage of different Dockerfiles
+
+
+### Running auto tests as root inside docker container: ###
+
+---------------------------------------------------
+~~~
+
+cd /tmp
+
+bash openvino_install_test.sh
+
+~~~
+---------------------------------------------------
 
 
 ### Running tests manually as root inside docker container: ###
-
-#### OpenVINO---1.144 ####
-
----------------------------------------------------
-~~~
-
-cd /opt/intel/openvino/deployment_tools/demo
-
-./demo_squeezenet_download_convert_run.sh
-
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.xml > /opt/intel/openvino_2019.1.144/deployment_tools/demo/squeezenet1.1.xml
-
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.bin > /opt/intel/openvino_2019.1.144/deployment_tools/demo/squeezenet1.1.bin
-
-cd /opt/intel/openvino_2019.1.144/deployment_tools/inference_engine/samples/python_samples
-
-python classification_sample/classification_sample.py -m /opt/intel/openvino_2019.1.144/deployment_tools/demo/squeezenet1.1.xml -i /opt/intel/openvino_2019.1.144/deployment_tools/demo/car.png
-
-~~~
----------------------------------------------------
-
-#### OpenVINO---2.242 ####
-
----------------------------------------------------
-~~~
-cd /opt/intel/openvino/deployment_tools/demo
-
-./demo_squeezenet_download_convert_run.sh
-
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.xml > /opt/intel/openvino_2019.2.242/deployment_tools/demo/squeezenet1.1.xml
-
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.bin > /opt/intel/openvino_2019.2.242/deployment_tools/demo/squeezenet1.1.bin
-
-cd /opt/intel/openvino_2019.2.242/deployment_tools/inference_engine/samples/python_samples
-
-python classification_sample/classification_sample.py -m /opt/intel/openvino_2019.2.242/deployment_tools/demo/squeezenet1.1.xml -i /opt/intel/openvino_2019.2.242/deployment_tools/demo/car.png
-
-~~~
----------------------------------------------------
 
 #### OpenVINO---3.334 ####
 
