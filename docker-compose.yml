@@ -7,7 +7,7 @@ services:
       privileged: false
       tty: true
       build:
-        context: $PWD
+        context: https://github.com/igor71/Yi-OpenVINO/tree/3.334.git
         dockerfile: Dockerfile
       volumes:
         - "/media:/media"
