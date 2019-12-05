@@ -22,14 +22,9 @@ if [[ "$BUILD_STATUS" == "Y" ]] || [[ "$BUILD_STATUS" == "y" ]] || [[ "$BUILD_ST
 
    if [ -d "openvino" ]; then rm -Rf openvino; fi
 
-   git clone --branch=3.334 --depth=1 https://yi-israel:Xuna7421@bitbucket.org/yi-israel/openvino/
+   git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
 
    cd openvino
-
-   ### Remove password from config file
-
-   git remote set-url origin https://yi-israel@bitbucket.org/yi-israel/openvino/
-
 
    #################################################
    #        Build Docker Image & Run Container     #
