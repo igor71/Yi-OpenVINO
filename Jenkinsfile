@@ -6,15 +6,15 @@ pipeline {
                 sh '''#!/bin/bash -xe
                    whoami
                    id
-                   docker build  -f Dockerfile-OpenVINO-2.242 -t yi/openvino:2.242 .
+                   docker build  -f Dockerfile-OpenVINO-3.334 -t yi/openvino:3.334 .
 		           ''' 
             }
         }
 	    stage('Test Docker Image') { 
             steps {
                 sh '''#!/bin/bash -xe
-		            echo 'Hello, OpenVINO_Docker'
-                    image_id="$(docker images -q yi/openvino:3.334)"
+		         echo 'Hello, OpenVINO_Docker'
+                         image_id="$(docker images -q yi/openvino:3.334)"
                       if [[ "$(docker images -q yi/openvino:3.334 2> /dev/null)" == "$image_id" ]]; then
                           docker inspect --format='{{range $p, $conf := .RootFS.Layers}} {{$p}} {{end}}' $image_id
                       else
