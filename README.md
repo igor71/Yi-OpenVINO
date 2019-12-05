@@ -1,6 +1,3 @@
-## Yi-OpenVINO
-Building OpenVINO Docker Image
-
 ### Clone Repository:###
 
 * git clone --branch=3.334 --depth=1 https://bitbucket.org/yi-israel/openvino/ 

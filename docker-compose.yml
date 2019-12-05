@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+    openvino:
+      entrypoint: ['bash']
+      image: yi/openvino:3.334
+      read_only: false
+      privileged: false
+      tty: true
+      build:
+        context: $PWD
+        dockerfile: Dockerfile
+      volumes:
+        - "/media:/media"
+      container_name: ${USER}-openvino-3.334
