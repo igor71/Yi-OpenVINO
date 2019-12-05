@@ -24,6 +24,18 @@ docker-compose -f docker-compose.yml up -d --build
 
 ~~~
 
+### Build the docker container using bash script : ###
+
+~~~
+git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
+
+cd openvino
+
+bash build-script.sh
+
+~~~
+
+
 ### Notes:
 * Dockerfile-OpenVINO-3.334 will use build from the sources python 3.6.8
 * Dockerfile-PyENV will use installation of python 3.6.8 into PYENV user folder
