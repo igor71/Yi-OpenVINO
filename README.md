@@ -37,6 +37,8 @@ Need to adjust docker-compose.yml file for usage of different Dockerfiles
 ---------------------------------------------------
 ~~~
 
+yi-dockeradmin $USER-openvino-3.334
+
 cd /tmp
 
 bash openvino_install_test.sh
