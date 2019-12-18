@@ -24,6 +24,20 @@ docker-compose -f docker-compose.yml up -d --build
 
 ~~~
 
+
+### Build the docker container on AWS from Dockerfile-AWS using Docker-Compose command : ###
+
+~~~
+git clone --branch=3.334 --depth=1 https://github.com/igor71/Yi-OpenVINO
+
+cd Yi-OpenVINO
+
+sed -i '/        dockerfile: Dockerfile/c\        dockerfile: Dockerfile-AWS' $PWD/docker-compose.yml
+
+docker-compose -f docker-compose.yml up -d --build
+
+~~~
+
 ### Build the docker container using bash script : ###
 
 ~~~
