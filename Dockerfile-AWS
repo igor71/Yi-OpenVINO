@@ -76,7 +76,7 @@ RUN ${PY} --version && \
 RUN ${PY} -m pip --no-cache-dir install \
     ipykernel \
     image \
-	  networkx==2.3.0 \
+    networkx==2.3.0 \
     matplotlib \
     opencv-python \
     numpy  && \
