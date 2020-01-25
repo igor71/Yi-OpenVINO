@@ -24,9 +24,9 @@ sleep 10
 
 # Test #2
 
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.xml > /opt/intel/openvino_2019.3.334/deployment_tools/demo/squeezenet1.1.xml
+pv /media/common/DOCKER_IMAGES/Tensorflow/Tflow-VNC-Soft/OpenVINO/OpenVINO-Test-Files/squeezenet1.1.xml > /opt/intel/openvino_2019.3.334/deployment_tools/demo/squeezenet1.1.xml
 
-pv /media/common/DOWNLOADS/UBUNTU/OpenVINO/DEMO/squeezenet1.1.bin > /opt/intel/openvino_2019.3.334/deployment_tools/demo/squeezenet1.1.bin
+pv /media/common/DOCKER_IMAGES/Tensorflow/Tflow-VNC-Soft/OpenVINO/OpenVINO-Test-Files/squeezenet1.1.bin > /opt/intel/openvino_2019.3.334/deployment_tools/demo/squeezenet1.1.bin
 
 cd /opt/intel/openvino_2019.3.334/deployment_tools/inference_engine/samples/python_samples
 
@@ -47,7 +47,7 @@ sleep 10
 
 cd /tmp
 
-cp -R /media/common/USERS/Sagi/OpenVINO .
+cp -R /media/common/DOCKER_IMAGES/Tensorflow/Tflow-VNC-Soft/OpenVINO/OpenVINO-Test-Files/OpenVINO .
 
 cd OpenVINO/
 
